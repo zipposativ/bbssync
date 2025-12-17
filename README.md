@@ -3,7 +3,7 @@ BBSSync ist ein Serveranwendung, welche die Tagessicherung aus BBS Planung mitte
 
 ---
 **⚠️INFORMATION⚠️**
-## Lizenz und Nutzung (Fair Code mit Commons Clause)
+## Lizenz und Nutzung
 
 Dieses Projekt wird als Fair Code veröffentlich.
 
