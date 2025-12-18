@@ -76,3 +76,11 @@ BBSSync verfügt über einen Windows Service Worker, welcher die Datensicherung 
 4. Geben Sie folgenden Befehl `sc create BBSSync displayname= "BBSSync Windows Agent" binpath= "C:\BBSSync Windows Agent\BBSSync.exe"` ein. Ändern Sie gegebenenfalls den `binpath` auf Ihren Pfad, wo die Exe liegt.
 5. Bearbeiten Sie die Datei `BBSSync.ddl.config`. Tragen Sie die Pfade zu den jweiligen Dateien ein, ändern Sie den Token und tragen Sie die URL zu Ihrem Server ein (z.B: https://10.10.0.2/bbssync/api.php)
 6. Öffnen Sie die Windows Verwaltungsplattform Dienste und starten Sie den Dienst neu.
+
+## BBSSync Server
+
+### Installation BBSSync Server
+1. Laden Sie mit `git clone ` die Repo herunter und navigieren Sie in das Verzeichnis `cd bbssync`.
+2. Machen Sie das Installationsskript ausführbar `chmod +x install.sh`.
+3. Sie werden im Script nach einem SMB Passwort gefragt. Richten Sie hier Ihr Passwort ein. Dieses kann immer über den Befehl `smbpasswd bbssync` neu gesetzt werden.
+4. Rufen Sie die Website des Servers auf `https://<IPv4>/bbssync/`. Der Server ist nur über HTTPS erreichbar.
