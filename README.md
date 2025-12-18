@@ -1,6 +1,9 @@
 # BBSSync Server & Agent
 BBSSync ist ein Serveranwendung, welche die Tagessicherung aus BBS Planung mittels Agent einließt und diese mittels Rest-API an die Serveranwendung sendet. Der Server verarbeitet die Schülerdaten und synchronisiert diese via LDAPS in das Active Directory.
 
+<img width="1893" height="865" alt="base" src="https://github.com/user-attachments/assets/40ce2d1a-6ad7-4352-a496-8d2595ec8912" />
+
+
 ---
 **⚠️INFORMATION⚠️**
 ## Lizenz und Nutzung
@@ -74,6 +77,8 @@ BBSSync verfügt über einen Windows Service Worker, welcher die Datensicherung 
 2. Entpacken Sie die Zip-Datei in dem Stammverzeichnis von Windows (C:).
 3. Navigieren Sie in das Verzeichnis und starten Sie dort mit Administratorrechten eine Powershell Kommandozeile
 4. Geben Sie folgenden Befehl `sc create BBSSync displayname= "BBSSync Windows Agent" binpath= "C:\BBSSync Windows Agent\BBSSync.exe"` ein. Ändern Sie gegebenenfalls den `binpath` auf Ihren Pfad, wo die Exe liegt.
+<img width="917" height="21" alt="create_service" src="https://github.com/user-attachments/assets/e8b2e557-aa05-4e27-ae24-062bb58da1c2" />
+
 5. Bearbeiten Sie die Datei `BBSSync.ddl.config`. Tragen Sie die Pfade zu den jweiligen Dateien ein, ändern Sie den Token und tragen Sie die URL zu Ihrem Server ein (z.B: https://10.10.0.2/bbssync/api.php)
 6. Öffnen Sie die Windows Verwaltungsplattform Dienste und starten Sie den Dienst neu.
 
