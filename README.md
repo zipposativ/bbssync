@@ -70,4 +70,9 @@ Diese Regelung stellt sicher, dass
 ## BBSSync Windows Agent
 BBSSync verfügt über einen Windows Service Worker, welcher die Datensicherung von BBS Planung ein ließt. Dafür werden aus der Sicherung die Schülerdaten `vname`, `nname`, `kl_name` eingelesen und an die Rest-API von BBSSync geschickt. Als Basis werden dafür die Dateien `SK_SIL.TXT` & `SK_ABL.TXT` genutzt.
 ### Installation BBSSync Windows Agent
-Laden Sie in den Releases die letzte Version von BBSSync Windows Agent herunter. Diese ist als `.zip` Datei hinterlegt.
+1. Laden Sie in den Releases die letzte Version von BBSSync Windows Agent herunter. Diese ist als `.zip` Datei hinterlegt.
+2. Entpacken Sie die Zip-Datei in dem Stammverzeichnis von Windows (C:).
+3. Navigieren Sie in das Verzeichnis und starten Sie dort mit Administratorrechten eine Powershell Kommandozeile
+4. Geben Sie folgenden Befehl `sc create BBSSync displayname= "BBSSync Windows Agent" binpath= "C:\BBSSync Windows Agent\BBSSync.exe"` ein. Ändern Sie gegebenenfalls den `binpath` auf Ihren Pfad, wo die Exe liegt.
+5. Bearbeiten Sie die Datei `BBSSync.ddl.config`. Tragen Sie die Pfade zu den jweiligen Dateien ein, ändern Sie den Token und tragen Sie die URL zu Ihrem Server ein (z.B: https://10.10.0.2/bbssync/api.php)
+6. Öffnen Sie die Windows Verwaltungsplattform Dienste und starten Sie den Dienst neu.
