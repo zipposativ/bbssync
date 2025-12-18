@@ -295,7 +295,7 @@
       $config['User']['mailUser'] = $_POST['user_mail_user'];
       $config['User']['mailDomain'] = $_POST['user_mail_domain'];
       $user_disabled = $_POST['user_disabled'];
-      $config['app']['localadmin'] = $_POST['app_localadmin'];
+      $config['App']['localadmin'] = $_POST['app_localadmin'];
       $app_localpassword = $_POST['app_localpassword'];
       $app_localpassword2 = $_POST['app_localpassword2'];
 
