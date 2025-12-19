@@ -108,15 +108,15 @@
         <p class="control"><a class="button is-static">Konfigurationsupdate</a></p>
         <p class="control"><span class="input"><?php echo $config['App']['configUpdate']; ?></span></p>
       </div>
-      <div class="field has-addons">
+      <!--<div class="field has-addons">
         <p class="control"><a class="button is-static">Letzte Agent Verbindung</a></p>
         <p class="control"><span class="input"><?php echo $config['stats']['lastAgentCall']; ?></span></p>
-      </div>
+      </div>-->
       <div class="field has-addons">
         <p class="control"><a class="button is-static">Verbindungstyp</a></p>
         <p class="control"><span class="input"><?php if($config['App']['synctype'] == "ldap"){echo "Active Directory";}elseif($config['App']['synctype'] == "eid"){echo "Entra ID Connector";}?></span></p>
       </div>
-      <div class="field has-addons">
+      <!--<div class="field has-addons">
         <p class="control"><a class="button is-static">Synchronisierte Benutzer</a></p>
         <p class="control"><span class="input"><?php echo $config['stats']['syncedUser']; ?></span></p>
       </div>
@@ -127,7 +127,7 @@
       <div class="field has-addons">
         <p class="control"><a class="button is-static">Entra ID Connector Status</a></p>
         <p class="control"><?php if($config['stats']['eidState'] == true){echo '<span class="input has-background-success has-text-white"><i class="fa-solid fa-check"></i></span>';}else{echo '<span class="input has-background-danger has-text-white"><i class="fa-solid fa-x"></i></span>';}?></p>
-      </div>
+      </div>-->
     <?php
   }
 
