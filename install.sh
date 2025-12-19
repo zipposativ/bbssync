@@ -38,7 +38,7 @@ echo "Create SMB User"
 adduser \
    --system \
    --shell /bin/bash \
-   --group www-data \
+   --ingroup www-data \
    --disabled-password \
    --home /home/bbssync \
    bbssync
@@ -47,7 +47,7 @@ smbpasswd -a bbssync
 #edit smb
 echo "Create Samba Config"
 rm -r /etc/samba/smb.conf
-cp ./smb/smb.conf /etc/samba/
+cp ./samba/smb.conf /etc/samba/
 systemctl restart smbd
 
 echo "Finished"
