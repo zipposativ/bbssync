@@ -33,22 +33,22 @@ systemctl restart nginx > /dev/null 2>&1
 cp -r ./www/ /etc/bbssync/www/
 chown www-data:www-data /etc/bbssync/www/
 
+#edit smb
+echo "Create Samba Config"
+rm -r /etc/samba/smb.conf
+cp ./samba/smb.conf /etc/samba/
+systemctl restart smbd
+
 #adduser
 echo "Create SMB User"
 adduser \
    --system \
    --shell /bin/bash \
-   --group www-data \
+   --ingroup www-data \
    --disabled-password \
    --home /home/bbssync \
    bbssync
 smbpasswd -a bbssync
-
-#edit smb
-echo "Create Samba Config"
-rm -r /etc/samba/smb.conf
-cp ./smb/smb.conf /etc/samba/
-systemctl restart smbd
 
 echo "Finished"
 echo "You cann Access via:"
