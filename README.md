@@ -112,4 +112,5 @@ Der Server stellt eine **SMB-Freigabe** bereit. Diese kann unter Windows eingebu
 1. Öffnen Sie den Windows Explorer.
 2. Rechtsklick auf **Dieser PC** → **Netzwerklaufwerk verbinden...**
 3. Geben Sie folgenden Pfad ein: `\\<IP oder Hostname>\bbssync`.
+
 In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schuüler im Format: `<Vorname>_<Nachname>.pdf`.
