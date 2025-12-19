@@ -70,25 +70,38 @@ Diese Regelung stellt sicher, dass
 
 
 
+```markdown
 ## BBSSync Windows Agent
-BBSSync verfügt über einen Windows Service Worker, welcher die Datensicherung von BBS Planung ein ließt. Dafür werden aus der Sicherung die Schülerdaten `vname`, `nname`, `kl_name` eingelesen und an die Rest-API von BBSSync geschickt. Als Basis werden dafür die Dateien `SK_SIL.TXT` & `SK_ABL.TXT` genutzt.
-### Installation BBSSync Windows Agent
-1. Laden Sie in den Releases die letzte Version von BBSSync Windows Agent herunter. Diese ist als `.zip` Datei hinterlegt.
-2. Entpacken Sie die Zip-Datei in dem Stammverzeichnis von Windows (C:).
-3. Navigieren Sie in das Verzeichnis und starten Sie dort mit Administratorrechten eine Powershell Kommandozeile
-4. Geben Sie folgenden Befehl `sc create BBSSync displayname= "BBSSync Windows Agent" binpath= "C:\BBSSync Windows Agent\BBSSync.exe"` ein. Ändern Sie gegebenenfalls den `binpath` auf Ihren Pfad, wo die Exe liegt.
-<img width="917" height="21" alt="create_service" src="https://github.com/user-attachments/assets/e8b2e557-aa05-4e27-ae24-062bb58da1c2" />
+Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
 
-5. Bearbeiten Sie die Datei `BBSSync.ddl.config`. Tragen Sie die Pfade zu den jweiligen Dateien ein, ändern Sie den Token und tragen Sie die URL zu Ihrem Server ein (z.B: https://10.10.0.2/bbssync/api.php)
-6. Öffnen Sie die Windows Verwaltungsplattform Dienste und starten Sie den Dienst neu.
+### Installation BBSSync Windows Agent
+1. Laden Sie im Bereich *Releases* die aktuelle Version des BBSSync Windows Agent herunter. Die Datei liegt als ZIP vor.
+2. Entpacken Sie das Archiv direkt auf Laufwerk C.
+3. Öffnen Sie das entpackte Verzeichnis und starten Sie dort eine PowerShell mit Administratorrechten.
+4. Legen Sie den Dienst an:  
+   `sc create BBSSync displayname= "BBSSync Windows Agent" binpath= "C:\BBSSync Windows Agent\BBSSync.exe"`  
+   Falls Sie das Verzeichnis geändert haben, passen Sie den Pfad an.
+5. Bearbeiten Sie die Datei `BBSSync.ddl.config`. Tragen Sie die Pfade zu den Sicherungsdateien ein, ergänzen Sie den Token und setzen Sie die URL Ihres Servers, etwa `https://10.10.0.2/bbssync/api.php`.
+6. Öffnen Sie die Windows Dienstverwaltung und starten Sie den neuen Dienst.
 
 ## BBSSync Server
 
 ### Installation BBSSync Server
-1. Laden Sie mit `https://github.com/zipposativ/bbssync.git` die Repo herunter und navigieren Sie in das Verzeichnis `cd bbssync`.
-2. Machen Sie das Installationsskript ausführbar `chmod +x install.sh` und starten Sie es `./install.sh` oder `sh install.sh`.
-3. Sie werden im Script nach einem SMB Passwort gefragt. Richten Sie hier Ihr Passwort ein. Dieses kann immer über den Befehl `smbpasswd bbssync` neu gesetzt werden.
-4. Rufen Sie die Website des Servers auf `https://<IPv4>/bbssync/`. Der Server ist nur über HTTPS erreichbar.
+1. Klonen Sie das Repository:  
+   `git clone https://github.com/zipposativ/bbssync.git`  
+   Danach wechseln Sie in das Verzeichnis:  
+   `cd bbssync`
+2. Machen Sie das Installationsskript ausführbar:  
+   `chmod +x install.sh`  
+   Anschließend starten:  
+   `./install.sh` oder `sh install.sh`
+3. Während der Installation werden Sie nach einem SMB-Passwort gefragt. Legen Sie es fest. Sie können es später jederzeit mit  
+   `smbpasswd bbssync`  
+   neu setzen.
+4. Rufen Sie anschließend die Weboberfläche auf:  
+   `https://<IPv4>/bbssync/`  
+   Der Zugriff ist ausschließlich per HTTPS möglich.
 
 ### BBSSync Nutzung
-BBSSync verfügt über eine SMB Schnittstelle. Dieses Freigabelaufwerk wird unter Windows eingebunden und es können die Schülerdaten im PDF Format weitergereicht werden.
+Der Server stellt eine SMB-Freigabe bereit. Diese wird unter Windows eingebunden und dient dazu, Schülerdaten im PDF-Format an BBSSync zu übergeben.
+```
