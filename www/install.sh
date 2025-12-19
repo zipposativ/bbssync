@@ -38,7 +38,7 @@ echo "Create SMB User"
 adduser \
    --system \
    --shell /bin/bash \
-   --group www-data \
+   --ingroup www-data \
    --disabled-password \
    --home /home/bbssync \
    bbssync
