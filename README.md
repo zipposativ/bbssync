@@ -70,7 +70,6 @@ Diese Regelung stellt sicher, dass
 
 
 
-```markdown
 ## BBSSync Windows Agent
 Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
 
@@ -104,4 +103,3 @@ Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von
 
 ### BBSSync Nutzung
 Der Server stellt eine SMB-Freigabe bereit. Diese wird unter Windows eingebunden und dient dazu, Schülerdaten im PDF-Format an BBSSync zu übergeben.
-```
