@@ -102,4 +102,4 @@ Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von
    Der Zugriff ist ausschließlich per HTTPS möglich.
 
 ### BBSSync Nutzung
-Der Server stellt eine SMB-Freigabe bereit. Diese wird unter Windows eingebunden und dient dazu, Schülerdaten im PDF-Format an BBSSync zu übergeben.
+Der Server stellt eine SMB-Freigabe bereit. Diese wird unter Windows eingebunden und dient dazu, Schülerdaten im PDF-Format bereit zu stellen.
