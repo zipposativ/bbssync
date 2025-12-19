@@ -30,7 +30,7 @@ rm -r /etc/nginx/sites-enabled/default > /dev/null 2>&1
 systemctl restart nginx > /dev/null 2>&1
 
 #move bbssync server file
-cp -r ./www/ /etc/bbssync/www/
+cp -r ./www/bbssync /etc/bbssync/www/
 chown -R www-data:www-data /etc/bbssync/www/
 
 #adduser
