@@ -109,7 +109,9 @@ BBSSync Server funktioniert nur mit **LDAPS (Secure)**. Ein Betrieb über unvers
 ---
 Im Adminpanel unter `System Settings` kann der Sync-Typ `Microsoft/OpenLDAP Active Directory` ausgewählt werden. Hier müssen die Anmeldedaten für den LDAP-Benutzer hinterlegt werden.
 Der Server stellt eine **SMB-Freigabe** bereit. Diese kann unter Windows eingebunden werden, um Schülerdaten im PDF-Format bereitzustellen:
+
 1. Öffnen Sie den Windows Explorer.
 2. Rechtsklick auf **Dieser PC** → **Netzwerklaufwerk verbinden...**
 3. Geben Sie folgenden Pfad ein: `\\<IP oder Hostname>\bbssync`.
-In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schuüler im Format: `<Vorname>_<Nachname>.pdf`.
+
+In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schüler im Format: `<Vorname>_<Nachname>.pdf`.
