@@ -11,7 +11,10 @@ apt install -y lsb-release apt-transport-https ca-certificates wget curl git > /
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg > /dev/null 2>&1
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list > /dev/null 2>&1
 apt update -y > /dev/null 2>&1
-apt install -y php8.4 php8.4-fpm php8.4-ldap php8.4-curl > /dev/null 2>&1
+apt install -y php8.4 php8.4-fpm php8.4-ldap php8.4-curl php8.4-gd php8.4-mbstring php8.4-xml php8.4-zip> /dev/null 2>&1
+
+#change php.ini
+sed -i.bak -E 's/^(max_execution_time\s*=\s*).*/\1900/' /etc/php/8.4/fpm/php.ini
 
 #Load packages
 echo "Disable Apache2 & install nginx, samba"
