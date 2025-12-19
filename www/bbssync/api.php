@@ -37,9 +37,9 @@
       // explode user data
       foreach ($payload['data'] as $userdata){
         //check data || all values needed
-        if(!empty($userdata['FAX']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
+        if(!empty($userdata['ID']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
           // define User ID
-          $id = $userdata['FAX'];
+          $id = $userdata['ID'];
           // create array of german umlauts
           $umlauts = array('ä' => 'ae', 'ö' => 'oe', 'ü' => 'ue', 'Ä' => 'Ae', 'Ö' => 'Oe', 'Ü' => 'Ue', 'ß' => 'ss');
           //define vars for names used in Displayname/Description
@@ -163,9 +163,9 @@
       $entra = new eid($config['EntraID']['tenantID'], $config['EntraID']['clientID'] ,$config['EntraID']['clientSecret']);
       foreach ($payload['data'] as $userdata){
         //check data || all values needed
-        if(!empty($userdata['FAX']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
+        if(!empty($userdata['ID']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
           // define User ID
-          $id = $userdata['FAX'];
+          $id = $userdata['ID'];
           // create array of german umlauts
           $umlauts = array('ä' => 'ae', 'ö' => 'oe', 'ü' => 'ue', 'Ä' => 'Ae', 'Ö' => 'Oe', 'Ü' => 'Ue', 'ß' => 'ss');
           //define vars for names used in Displayname/Description
