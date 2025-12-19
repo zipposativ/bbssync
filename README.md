@@ -89,3 +89,6 @@ BBSSync verfügt über einen Windows Service Worker, welcher die Datensicherung 
 2. Machen Sie das Installationsskript ausführbar `chmod +x install.sh` und starten Sie es `./install.sh` oder `sh install.sh`.
 3. Sie werden im Script nach einem SMB Passwort gefragt. Richten Sie hier Ihr Passwort ein. Dieses kann immer über den Befehl `smbpasswd bbssync` neu gesetzt werden.
 4. Rufen Sie die Website des Servers auf `https://<IPv4>/bbssync/`. Der Server ist nur über HTTPS erreichbar.
+
+### BBSSync Nutzung
+BBSSync verfügt über eine SMB Schnittstelle. Dieses Freigabelaufwerk wird unter Windows eingebunden und es können die Schülerdaten im PDF Format weitergereicht werden.
