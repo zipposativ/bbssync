@@ -47,7 +47,7 @@ smbpasswd -a bbssync
 #edit smb
 echo "Create Samba Config"
 rm -r /etc/samba/smb.conf
-cp ./smb/smb.conf /etc/samba/
+cp ./samba/smb.conf /etc/samba/
 systemctl restart smbd
 
 echo "Finished"
