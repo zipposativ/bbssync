@@ -148,7 +148,7 @@
       <input type="radio" name="app_synctype" id="ad_radio" value="ldap" <?php if($config['App']['synctype'] == "ldap"){echo "checked";} ?>>
       <label class="radio" for="ad_radio">Microsoft/OpenLDAP Active Directory</label>
       <br/>
-      <input type="radio" name="app_synctype" id="mseic_radio" value="eid" <?php if($config['App']['synctype'] == "eid"){echo "checked";} ?>>
+      <input type="radio" name="app_synctype" id="mseic_radio" value="eid" <?php if($config['App']['synctype'] == "eid"){echo "checked";} ?> disabled>
       <label class="radio" for="mseic_radio">Microsoft Entra ID Connector</label>
 
       <div id="ad" class="section">
