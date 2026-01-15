@@ -101,6 +101,18 @@ Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von
    `https://<IPv4>/bbssync/`  
    Der Zugriff ist ausschließlich per HTTPS möglich.
 
+### Ein Update für BBSSync Server einspielen
+1. Klonen Sie das Repository:  
+   `git clone https://github.com/zipposativ/bbssync.git`  
+   Danach wechseln Sie in das Verzeichnis:  
+   `cd bbssync`
+2. Machen Sie das Upgradeskript ausführbar:  
+   `chmod +x upgrade.sh`  
+   Anschließend starten:  
+   `./upgrade.sh` oder `sh upgrade.sh`
+
+Der Webserver wird während des Upgrades abgeschaltet. Es wird immer eine Sicherheitskopie der letzten Version im Verzeichnis `/var/bbssync/backup` hinterlegt. Bei einem erneuten Upgrade wird diese Version gelöscht und überschrieben.
+
 ### BBSSync Nutzung
 ---
 
