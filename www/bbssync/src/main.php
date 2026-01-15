@@ -189,7 +189,7 @@
         <span class="icon has-text-warning">
           <i class="fa-solid fa-triangle-exclamation"></i>
         </span>
-        <span>Als Primärschlüssel für jeden Account wird die Schüler Nummer genutzt (außer bei Microsoft Entra ID Connector). Die einmalige Schüler ID <strong>{{uid}}</strong>, ist als EmployeeID im Active Directory wiederzufinden.</span>
+        <span>Als Primärschlüssel für jeden Account wird das FAX Feld in BBS-Planung genutzt (außer bei Microsoft Entra ID Connector). Die einmalige Schüler ID <strong>{{uid}}</strong>, ist als EmployeeID im Active Directory wiederzufinden.</span>
       </div>
       <label class="label">SamAccountName & UserPrincipalName (UPN)</label>
       Verfügbare Variabeln:
