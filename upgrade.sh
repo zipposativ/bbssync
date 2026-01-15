@@ -23,11 +23,12 @@ git clone https://github.com/zipposativ/bbssync.git /tmp/bbssync
 
 mkdir -p /etc/bbssync
 cp -r /tmp/bbssync/www/ /etc/bbssync
-chown -R www-data:www-data /etc/bbssync
 
 #restore config
 cp -r /var/bbssync/backup/www/bbssync/config.php /etc/bbssync/www/bbssync/config.php
 cp -r /var/bbssync/backup/www/bbssync/userdata /etc/bbssync/www/bbssync/
+
+chown -R www-data:www-data /etc/bbssync
 
 
 
