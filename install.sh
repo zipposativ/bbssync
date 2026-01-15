@@ -19,6 +19,7 @@ sed -i.bak -E 's/^(max_execution_time\s*=\s*).*/\1900/' /etc/php/8.4/fpm/php.ini
 #Load packages
 echo "Disable Apache2 & install nginx, samba"
 systemctl stop apache2 > /dev/null 2>&1
+systemctl disable apache2 > /dev/null 2>&1
 apt install -y nginx samba > /dev/null 2>&1
 
 #Create dir
