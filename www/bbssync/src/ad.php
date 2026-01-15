@@ -304,6 +304,7 @@
         ldap_mod_replace($ldap, $new_user_dn, $entry);
         //change sAMAccountName
         $value["samaccountname"] = $samaccountname;
+        $value["userprincipalname"] = $samaccountname."@".$domain;
         ldap_mod_replace($ldap, $new_user_dn, $value);
         return true;
       }else{
