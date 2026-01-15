@@ -158,56 +158,56 @@
       // Disconnect from LDAP Server
       $disconnect = $ldap->disconnect($conn);
     }elseif($config['App']['synctype'] == "eid"){
-      //include
-      require_once("./src/eid.php");
-      $entra = new eid($config['EntraID']['tenantID'], $config['EntraID']['clientID'] ,$config['EntraID']['clientSecret']);
-      foreach ($payload['data'] as $userdata){
-        //check data || all values needed
-        if(!empty($userdata['ID']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
-          // define User ID
-          $id = $userdata['ID'];
-          // create array of german umlauts
-          $umlauts = array('ä' => 'ae', 'ö' => 'oe', 'ü' => 'ue', 'Ä' => 'Ae', 'Ö' => 'Oe', 'Ü' => 'Ue', 'ß' => 'ss');
-          //define vars for names used in Displayname/Description
-          $vname_nom = $userdata['VNAME'];
-          $nname_nom = $userdata['NNAME'];
-          //define vars for names used for shorting
-          $vnameOriginal = $userdata['VNAME'];
-          $nnameOriginal = $userdata['NNAME'];
-          // change names to max 8 signs & update umlauts
-          $vname = substr(strtr(strtolower($vnameOriginal), $umlauts), 0, 8);
-          $nname = substr(strtr(strtolower($nnameOriginal), $umlauts), 0, 8);
-          //define groupname
-          $kl_name =  $userdata['KL_NAME'];
-          //define array for replace variables from adminpanel
-          $replace = [
-            '{{vorname}}'  => $vname,
-            '{{nachname}}' => $nname,
-            '{{klasse}}'   => $kl_name,
-            '{{uid}}'      => $id,
-          ];
-          // create var user with replaced content
-          foreach ($config['User'] as $key => $value) {
-            if (!is_string($value)) {
-              $user[$key] = $value;
-              continue;
-            }
-            // only for displayname & decription
-            if ($key === 'displayname' OR $key === 'description') {
-              $replaceOther = [
-                '{{vorname}}'  => $vname_nom,
-                '{{nachname}}' => $nname_nom,
-                '{{klasse}}'   => $kl_name,
-                '{{uid}}'      => $id,
-              ];
-              $user[$key] = str_replace(array_keys($replaceOther), array_values($replaceOther), $value);
-            } else {
-              $user[$key] = str_replace(array_keys($replace), array_values($replace), $value);
-            }
-          }
-          //Arbeitsebene
-        }
-      }
+      // //include
+      // require_once("./src/eid.php");
+      // $entra = new eid($config['EntraID']['tenantID'], $config['EntraID']['clientID'] ,$config['EntraID']['clientSecret']);
+      // foreach ($payload['data'] as $userdata){
+      //   //check data || all values needed
+      //   if(!empty($userdata['ID']) AND !empty($userdata['VNAME']) AND !empty($userdata['NNAME']) AND !empty($userdata['KL_NAME'])){
+      //     // define User ID
+      //     $id = $userdata['ID'];
+      //     // create array of german umlauts
+      //     $umlauts = array('ä' => 'ae', 'ö' => 'oe', 'ü' => 'ue', 'Ä' => 'Ae', 'Ö' => 'Oe', 'Ü' => 'Ue', 'ß' => 'ss');
+      //     //define vars for names used in Displayname/Description
+      //     $vname_nom = $userdata['VNAME'];
+      //     $nname_nom = $userdata['NNAME'];
+      //     //define vars for names used for shorting
+      //     $vnameOriginal = $userdata['VNAME'];
+      //     $nnameOriginal = $userdata['NNAME'];
+      //     // change names to max 8 signs & update umlauts
+      //     $vname = substr(strtr(strtolower($vnameOriginal), $umlauts), 0, 8);
+      //     $nname = substr(strtr(strtolower($nnameOriginal), $umlauts), 0, 8);
+      //     //define groupname
+      //     $kl_name =  $userdata['KL_NAME'];
+      //     //define array for replace variables from adminpanel
+      //     $replace = [
+      //       '{{vorname}}'  => $vname,
+      //       '{{nachname}}' => $nname,
+      //       '{{klasse}}'   => $kl_name,
+      //       '{{uid}}'      => $id,
+      //     ];
+      //     // create var user with replaced content
+      //     foreach ($config['User'] as $key => $value) {
+      //       if (!is_string($value)) {
+      //         $user[$key] = $value;
+      //         continue;
+      //       }
+      //       // only for displayname & decription
+      //       if ($key === 'displayname' OR $key === 'description') {
+      //         $replaceOther = [
+      //           '{{vorname}}'  => $vname_nom,
+      //           '{{nachname}}' => $nname_nom,
+      //           '{{klasse}}'   => $kl_name,
+      //           '{{uid}}'      => $id,
+      //         ];
+      //         $user[$key] = str_replace(array_keys($replaceOther), array_values($replaceOther), $value);
+      //       } else {
+      //         $user[$key] = str_replace(array_keys($replace), array_values($replace), $value);
+      //       }
+      //     }
+      //     //Arbeitsebene
+      //   }
+      // }
     }
   }
 
