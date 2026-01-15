@@ -71,7 +71,7 @@ Diese Regelung stellt sicher, dass
 
 
 ## BBSSync Windows Agent
-Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
+Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname`, `fax` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
 
 ### Installation BBSSync Windows Agent
 1. Laden Sie im Bereich *Releases* die aktuelle Version des BBSSync Windows Agent herunter. Die Datei liegt als ZIP vor.
