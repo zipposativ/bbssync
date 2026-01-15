@@ -20,6 +20,7 @@ rm -r /etc/bbssync/
 mkdir -p /tmp/bbssync
 git clone https://github.com/zipposativ/bbssync.git /tmp/bbssync
 
+mkdir /etc/bbssync
 cp -r /tmp/bbssync/www/ /etc/bbssync
 
 #restore config
