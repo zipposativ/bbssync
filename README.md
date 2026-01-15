@@ -118,3 +118,12 @@ Der Server stellt eine **SMB-Freigabe** bereit. Diese kann unter Windows eingebu
 3. Geben Sie folgenden Pfad ein: `\\<IP oder Hostname>\bbssync`.
 
 In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schuüler im Format: `<Vorname>_<Nachname>.pdf`.
+
+### BBS-Planung Besonderheiten
+---
+
+**⚠️INFORMATION⚠️**
+
+In BBS-Planung muss bei dem Schüler eine inviduelle Nummer in das FAX-Feld eingetragen werden. Die Schüler-Nr. kann nicht genutzt werden. Sobald ein Schüler in Abgänger verschoben wird, erhält er eine neue Schüler-Nr. Daher wird als Primärattribut das FAX-Feld genutzt.
+
+---
