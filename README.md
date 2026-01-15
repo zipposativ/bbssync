@@ -119,6 +119,9 @@ Der Server stellt eine **SMB-Freigabe** bereit. Diese kann unter Windows eingebu
 
 In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schuüler im Format: `<Vorname>_<Nachname>.pdf`.
 
+<img width="2556" height="1271" alt="zugangsdaten" src="https://github.com/user-attachments/assets/e0e6c449-a0be-44ac-8c30-9aec2f32b1d4" />
+
+
 ### BBS-Planung Besonderheiten
 ---
 
