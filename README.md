@@ -135,6 +135,7 @@ In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befind
 
 #### Benutzervariabel
 BBSSync ist so konzipiert, dass Benutzer variable erstellt werden können.
+<img width="1985" height="974" alt="users" src="https://github.com/user-attachments/assets/938361fb-d770-479f-9b62-3ff0313750a1" />
 
 
 ### BBS-Planung Besonderheiten
