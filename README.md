@@ -71,7 +71,7 @@ Diese Regelung stellt sicher, dass
 
 
 ## BBSSync Windows Agent
-Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
+Der Windows Agent von BBSSync läuft als Dienst und liest die Datensicherung von BBS Planung ein. Aus den Sicherungsdateien werden die Felder `vname`, `nname`, `fax` und `kl_name` übernommen und an die REST-API von BBSSync gesendet. Grundlage dafür sind die Dateien `SK_SIL.TXT` und `SK_ABL.TXT`.
 
 ### Installation BBSSync Windows Agent
 1. Laden Sie im Bereich *Releases* die aktuelle Version des BBSSync Windows Agent herunter. Die Datei liegt als ZIP vor.
@@ -118,6 +118,9 @@ Der Server stellt eine **SMB-Freigabe** bereit. Diese kann unter Windows eingebu
 3. Geben Sie folgenden Pfad ein: `\\<IP oder Hostname>\bbssync`.
 
 In der Freigabe gibt es Unterordner für jede Klasse. In den Unterordnern befinden sich die PDFs für jeden Schuüler im Format: `<Vorname>_<Nachname>.pdf`.
+
+<img width="2556" height="1271" alt="zugangsdaten" src="https://github.com/user-attachments/assets/e0e6c449-a0be-44ac-8c30-9aec2f32b1d4" />
+
 
 ### BBS-Planung Besonderheiten
 ---
