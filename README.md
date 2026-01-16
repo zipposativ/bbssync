@@ -32,20 +32,6 @@ Ohne gesonderte Lizenz ist es nicht erlaubt
 - die Software weiterzuverkaufen oder als Teil eines kommerziellen Angebots bereitzustellen
 - auf Basis dieses Codes ein konkurrierendes kommerzielles Produkt anzubieten
 
-### Nutzung durch Unternehmen
-
-Unternehmen dürfen diese Software nicht kostenlos nutzen.
-
-Wenn Unternehmen die Software einsetzen möchten, insbesondere
-
-- zur Bereitstellung für Schulen
-- im Rahmen von Dienstleistungs- oder Hosting-Angeboten
-- zur internen oder externen Nutzung im Bildungsumfeld
-
-ist eine kostenpflichtige Lizenz pro Schule erforderlich.
-
-Bitte nehmen Sie dafür direkt Kontakt mit mir auf.
-
 ### Begründung
 
 Dieses Projekt wurde ausschließlich für Berufsbildende Schulen in Niedersachsen entwickelt.
