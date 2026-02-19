@@ -55,4 +55,4 @@ Diese Regelung stellt sicher, dass
 
 
 ## Installation
-Die Installationsanleitung steht [hier](wiki/Installation#bbssync-server) zur Verfügung!
+Die Installationsanleitung steht [hier](https://github.com/zipposativ/bbssync/wiki/Installation) zur Verfügung!
