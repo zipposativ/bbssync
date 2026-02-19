@@ -52,3 +52,7 @@ Diese Regelung stellt sicher, dass
 
 
 ---
+
+
+## Installation
+Die Installationsanleitung steht [hier](wiki/Installation#bbssync-server) zur Verfügung!
